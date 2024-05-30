@@ -23,11 +23,8 @@ public class LinkedList<E> {
     }
 
     public E get(int index){
-        if (head == null){
-            throw new Error();
-        }
-        if (index <= 0){
-            return head.data;
+        if (index < 0 || index >= length){
+            return null;
         }
 
         Node node = getNode(index);
