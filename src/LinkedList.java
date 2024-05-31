@@ -12,6 +12,7 @@ public class LinkedList<E> {
     }
 
     private Node head = null;
+    private Node tail = null;
     private int length = 0;
 
     private Node getNode(int index){
@@ -20,6 +21,14 @@ public class LinkedList<E> {
             current = current.next;
         }
         return current;
+    }
+
+    public boolean isEmpty(){
+        return length == 0;
+    }
+
+    public int length(){
+        return length;
     }
 
     public E get(int index){
@@ -33,13 +42,23 @@ public class LinkedList<E> {
 
     public void insert(int index, E value){
         if (index <= 0){
-            head = new Node(value, head);
+            if (head == null){
+                head = tail = new Node(value, null);
+            }
+            else {
+                head = new Node(value, head);
+            }
             length++;
             return;
         }
 
-        if (index > length){
-            getNode(length - 1).next = new Node(value, null);
+        if (index >= length){
+            if (tail == null){
+                head = tail = new Node(value, null);
+            }
+            else{
+                tail = getNode(length - 1).next = new Node(value, null);
+            }
             length++;
             return;
         }
@@ -56,7 +75,10 @@ public class LinkedList<E> {
     public void delete(int index){
         if (index < 0 || index >= length) return;
 
-        if (length == 1) head = null;
+        if (length == 1){
+            head = tail = null;
+        }
+
         else if (index == 0){
             head = head.next;
         }
@@ -65,14 +87,5 @@ public class LinkedList<E> {
             prevNode.next = prevNode.next.next;
         }
         length--;
-    }
-
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        list.insert(0, 5);
-        list.insert(1, 10);
-        list.insert(2, 15);
-        list.delete(0);
-        System.out.println(list.get(0));
     }
 }
