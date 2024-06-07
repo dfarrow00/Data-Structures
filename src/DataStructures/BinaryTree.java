@@ -1,4 +1,6 @@
-//BinaryTree implementation
+package DataStructures;
+
+//DataStructures.BinaryTree implementation
 public class BinaryTree<E> {
 
     private E value;

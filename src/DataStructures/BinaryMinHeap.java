@@ -1,3 +1,5 @@
+package DataStructures;
+
 //Binary Min Heap implemented using an array.
 public class BinaryMinHeap {
     private int[] tree = new int[10];

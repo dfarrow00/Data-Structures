@@ -1,4 +1,6 @@
-//Queue implementation
+package DataStructures;
+
+//DataStructures.Queue implementation
 public class Queue<E> {
     LinkedList<E> queue = new LinkedList<>();
 

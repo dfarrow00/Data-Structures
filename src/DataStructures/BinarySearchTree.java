@@ -1,3 +1,5 @@
+package DataStructures;
+
 //Binary Search Tree implementation
 public class BinarySearchTree {
     private class Node{

@@ -1,3 +1,5 @@
+package DataStructures;
+
 public class Trie {
     private static class TrieNode{
         public TrieNode[] children;
@@ -60,18 +62,18 @@ public class Trie {
             if (current.children[i] != null) count++;
         }
 
-        if (count > 0) { //If the deleted key is a prefix of other words in Trie.
+        if (count > 0) { //If the deleted key is a prefix of other words in DataStructures.Trie.
             current.wordCount--;
             return true;
         }
 
-        //If the deleted word shares a common prefix with other words in Trie.
+        //If the deleted word shares a common prefix with other words in DataStructures.Trie.
         if (lastBranchNode != null) {
             lastBranchNode.children[lastBranchChar - 'a'] = null; //Remove the link to the deleted key
             return true;
         }
 
-        //If the deleted key does not share any common prefix with other keys in Trie.
+        //If the deleted key does not share any common prefix with other keys in DataStructures.Trie.
         else {
             root.children[key.charAt(0) - 'a'] = null; //Remove the link to the deleted key from the root
             return true;

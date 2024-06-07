@@ -1,3 +1,5 @@
+package DataStructures;
+
 //Singly Linked List Implementation
 public class LinkedList<E> {
 

@@ -1,3 +1,5 @@
+package DataStructures;
+
 //Hash table implemented using separate chaining and dynamic resizing.
 public class HashTable {
 

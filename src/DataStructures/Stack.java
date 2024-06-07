@@ -1,4 +1,6 @@
-//Stack Implementation
+package DataStructures;
+
+//DataStructures.Stack Implementation
 public class Stack<E> {
     LinkedList<E> list = new LinkedList<>();
 

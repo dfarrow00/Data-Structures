@@ -1,4 +1,4 @@
-//Undirected graph implemented using adjacency list
+package DataStructures;//Undirected graph implemented using adjacency list
 
 import java.util.HashMap;
 import java.util.Map;
